@@ -17,8 +17,7 @@ export default async function handler(req, res) {
     const finalProfileUrl = profile ? profile : defaultProfileUrl;
 
     // Bangun URL API eksternal dengan URL profil yang sudah ditentukan
-    const apiUrl = `https://api.siputzx.my.id/api/m/tweet?profile=${encodeURIComponent(finalProfileUrl)}&name=${encodeURIComponent(name)}&username=${encodeURIComponent(username)}&tweet=${encodeURIComponent(tweet)}&image=null&theme=dark&retweets=${retweets}&quotes=400&likes=${likes}&client=Twitter%20for%20iPhone`;
-
+    const apiUrl = `https://api.siputzx.my.id/api/m/tweet?profile=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F159487561%3Fv%3D4&name=siputzx&username=siputzx&tweet=Hello%20World&image=null&theme=dark&retweets=1000&quotes=200&likes=5000&client=Twitter%20for%20iPhone';
     const response = await fetch(apiUrl);
 
     if (!response.ok) {
