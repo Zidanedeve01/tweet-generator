@@ -240,7 +240,7 @@
       showLoading();
       try {
         // Mengubah URL fetch ke endpoint Vercel lokal
-        const res = await fetch("/tweet", {
+        const res = await fetch("tweet", {
           method: "POST", headers: { "content-type": "application/json" },
           body: JSON.stringify({
             profile: profile || null, name, username, tweet,
